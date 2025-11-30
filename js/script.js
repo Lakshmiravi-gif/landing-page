@@ -5,7 +5,6 @@ menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 });
 
-// Smooth scroll for anchor links
 document.querySelectorAll('.nav-menu a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -13,10 +12,9 @@ document.querySelectorAll('.nav-menu a').forEach(anchor => {
         const targetId = this.getAttribute('href');
         document.querySelector(targetId).scrollIntoView({
             behavior: 'smooth',
-            block: 'start' // ensures section aligns at top
+            block: 'start' 
         });
-
-        // Close mobile menu after click
+        
         if (navMenu.classList.contains('show')) {
             navMenu.classList.remove('show');
         }
